@@ -1,3 +1,6 @@
+<img width="940" height="566" alt="Screenshot 2025-12-04 194220" src="https://github.com/user-attachments/assets/536db630-621b-4053-96b8-d9fd227dc873" />
+<img width="919" height="341" alt="Screenshot 2025-12-04 191638" src="https://github.com/user-attachments/assets/489e32cf-fa96-4dad-9625-e2d87b0b7db0" />
+<img width="943" height="596" alt="Screenshot 2025-12-04 191601" src="https://github.com/user-attachments/assets/ac1ee1df-0b6a-4d34-b5a1-1b3aef36797a" />
 Error: No module named 'langchain.retrievers'
 
 (1) Replace the old import with:
