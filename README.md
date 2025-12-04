@@ -48,6 +48,55 @@ A multi-modal RAG (Retrieval Augmented Generation) system built with Streamlit, 
 └── README.md                 # This file
 ```
 
+
+
+## Workflow
+
+                ┌──────────────────┐
+                │   User Query      │
+                └─────────┬────────┘
+                          │
+                          ▼
+                ┌──────────────────┐
+                │   Frontend UI    │  ← Streamlit / Node.js CLI
+                └─────────┬────────┘
+                          │
+                          ▼
+                ┌───────────────────────────────┐
+                │      Query Processor           │
+                │  - Preprocess query            │
+                │  - Create embedding            │
+                └─────────┬─────────────────────┘
+                          │
+                          ▼
+        ┌───────────────────────────────────────┐
+        │             Vector Store               │
+        │  (ChromaDB / Pinecone / FAISS)         │
+        │  - Stores document embeddings          │
+        │  - Cosine similarity search            │
+        └───────────────┬───────────────────────┘
+                        │ relevant chunks
+                        ▼
+             ┌───────────────────────┐
+             │   Context Builder     │
+             │ - Merges retrieved    │
+             │   chunks + query      │
+             │ - Applies prompt      │
+             │   template            │
+             └──────────┬────────────┘
+                        │ context
+                        ▼
+             ┌───────────────────────┐
+             │     LLM (OpenAI)      │
+             │ - Generates answer     │
+             │ - Uses RAG context     │
+             └──────────┬────────────┘
+                        │
+                        ▼
+               ┌──────────────────┐
+               │ Final Response    │
+               └──────────────────┘
+               
 ## Installation
 
 1. **Clone the repository** (if applicable) or navigate to the project directory.
