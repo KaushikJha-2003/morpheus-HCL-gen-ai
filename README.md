@@ -1,3 +1,11 @@
+Team - Morpheus
+
+Team Memebers:
+(1) Shreya Jain
+(2) Kaushik Jha
+
+
+
 # Intellicite - AI Document Assistant
 
 A multi-modal RAG (Retrieval Augmented Generation) system built with Streamlit, Groq LLM, and ChromaDB. This application allows you to upload documents (PDF, websites, YouTube videos) and interact with them using an AI assistant.
